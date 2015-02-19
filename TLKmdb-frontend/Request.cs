@@ -23,12 +23,12 @@ namespace TLKmdb_frontend
                 Encoding.UTF8.GetBytes(user + ":" + pass));
 
             // Set address
-            client.BaseAddress = new Uri("http://" + url + "/persons");
+            client.BaseAddress = new Uri("http://" + url);
 
             // Set default headers
             client.DefaultRequestHeaders.Authorization =
                 new AuthenticationHeaderValue("Basic", base64cred);
-            //client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
 
             if (type == "POST")
             {
