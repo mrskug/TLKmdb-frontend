@@ -171,7 +171,7 @@
             // 
             this.consoleBox.Location = new System.Drawing.Point(3, 3);
             this.consoleBox.Name = "consoleBox";
-            this.consoleBox.Size = new System.Drawing.Size(914, 591);
+            this.consoleBox.Size = new System.Drawing.Size(915, 234);
             this.consoleBox.TabIndex = 0;
             this.consoleBox.Text = "Derpbugging";
             // 

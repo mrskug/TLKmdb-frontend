@@ -104,6 +104,7 @@
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
+            this.passTextBox.Text = "molnet";
             this.passTextBox.UseSystemPasswordChar = true;
             // 
             // loginTextBox
