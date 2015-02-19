@@ -10,7 +10,6 @@ namespace TLKmdb_frontend
     {
         // modelname
         public string model;
-
         // pk (int)
         public int pk;
         // person (int)
@@ -18,34 +17,32 @@ namespace TLKmdb_frontend
         // year (int)
         public int year;
         // type (int)
-        public int type;
+        public string type;
         // type string
-        public string sType;
+        public int iType;
 
-        public ModelMembership(string model)
+        public ModelMembership(){}
+/**        public ModelMembership(int pk, int person, int year, int type)
         {
-            this.model = model;
-        }
-        public ModelMembership(string model, int pk, int person, int year, string sType)
-        {
-            this.model = model;
             this.pk = pk;
             this.person = person;
             this.year = year;
-            this.sType = sType;
+            this.sType = "derp";
         }
-        public ModelMembership(string model, int pk, int person, int year, int type)
+
+        public ModelMembership(int pk, int person, int year, string type)
         {
-            this.model = model;
             this.pk = pk;
             this.person = person;
             this.year = year;
-            this.sType = getTypeByPk(model, type);
+            this.sType = type;
+            //this.sType = getTypeByPk(model, Convert.ToInt32(type));
         }
 
         public string getTypeByPk(string model, int type)
         {
             return "derp";
-        }
+       }
+ **/
     }
 }
