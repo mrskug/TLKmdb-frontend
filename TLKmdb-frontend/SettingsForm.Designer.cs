@@ -104,7 +104,7 @@
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
-            this.passTextBox.Text = "molnet";
+            this.passTextBox.Text = "password";
             this.passTextBox.UseSystemPasswordChar = true;
             // 
             // loginTextBox
@@ -113,7 +113,7 @@
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
             this.loginTextBox.TabIndex = 2;
-            this.loginTextBox.Text = "skug";
+            this.loginTextBox.Text = "username";
             // 
             // label2
             // 
