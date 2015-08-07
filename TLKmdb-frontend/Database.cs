@@ -50,5 +50,20 @@ namespace TLKmdb_frontend
                 persons.Add(person);
             }
         }
+
+        public List<Person> DummyPopulateDB()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                persons.Add(new Person()
+                {
+                    pk = i,
+                    firstname = "First Name " + i,
+                    lastname = "Last Name " + i,
+                    address = "Address of person " + i
+                });
+            }
+            return persons;
+        }
     }
 }

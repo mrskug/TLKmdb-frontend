@@ -18,7 +18,7 @@ namespace TLKmdb_frontend
             this.settingsForm = new SettingsForm();
             InitializeComponent();
         }
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        private void fetchDatabase()
         {
             if (settingsForm.server == "" || settingsForm.login == "" || settingsForm.password == "")
             {
@@ -32,23 +32,27 @@ namespace TLKmdb_frontend
                 string requestJson = "{ }";
                 string type = "GET";
                 consoleBox.AppendText(user + "\n" + pass + "\n" + baseURL + "\n" + "\n");
-                //Request responseJson = new Request(baseURL, user, pass, requestJson, type);
+
                 Database TLK = new Database(baseURL, user, pass, "TLK");
                 TLK.populateDB();
-                foreach (Person person in TLK.persons)
-                {   
-                    consoleBox.AppendText(person.pk.ToString() +"\n");
-                    consoleBox.AppendText(person.firstname.ToString() + "\n");
-                    consoleBox.AppendText(person.middlenames.ToString() + "\n");
-                    consoleBox.AppendText(person.lastname.ToString() + "\n");
-                    foreach (var item in person.member)
-                    {
-                        consoleBox.AppendText(item.pk.ToString() + "\n");
-                        consoleBox.AppendText(item.person.ToString() + "\n");
-                        consoleBox.AppendText(item.year.ToString() + "\n");
-                        consoleBox.AppendText(item.type.ToString() + "\n");
-                    }
-                } 
+
+                dataGridView.DataSource = TLK.persons;
+
+                /**
+                                foreach (Person person in TLK.persons)
+                                {
+                                    consoleBox.AppendText(person.pk.ToString() + "\n");
+                                    consoleBox.AppendText(person.firstname.ToString() + "\n");
+                                    consoleBox.AppendText(person.middlenames.ToString() + "\n");
+                                    consoleBox.AppendText(person.lastname.ToString() + "\n");
+                                    foreach (var item in person.member)
+                                    {
+                                        consoleBox.AppendText(item.pk.ToString() + "\n");
+                                        consoleBox.AppendText(item.person.ToString() + "\n");
+                                        consoleBox.AppendText(item.year.ToString() + "\n");
+                                        consoleBox.AppendText(item.type.ToString() + "\n");
+                                    }
+                                }**/
             }
         }
 
@@ -64,6 +68,11 @@ namespace TLKmdb_frontend
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             settingsForm.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //aboutWindow.show();
         }
     }
 }

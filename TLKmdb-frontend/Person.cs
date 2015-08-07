@@ -3,29 +3,49 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
+using System.ComponentModel;
 
 namespace TLKmdb_frontend
 {
     class Person
     {
-        public int pk;
-        public string firstname;
-        public string middlenames;
-        public string lastname;
-        public string dob;
-        public string dod;
-        public string birthplace;
-        public string email;
-        public string address;
-        public string city;
-        public string zip;
-        public string country;
-        public string joined;
-        public string graduated;
-        public string company;
-        public string company_email;
-        public string company_phone;
-        public string notes;
+        [DisplayName("ID")]
+        public int pk {get;set;}
+        [DisplayName("Firstname")]
+        public string firstname { get; set; }
+        [DisplayName("Middlenames")]
+        public string middlenames { get; set; }
+        [DisplayName("Lastname")]
+        public string lastname { get; set; }
+        [DisplayName("dob")]
+        public string dob { get; set; }
+        [DisplayName("dod")]
+        public string dod { get; set; }
+        [DisplayName("Birthplace")]
+        public string birthplace { get; set; }
+        [DisplayName("E-Mail")]
+        public string email { get; set; }
+        [DisplayName("Address")]
+        public string address { get; set; }
+        [DisplayName("City")]
+        public string city { get; set; }
+        [DisplayName("Zip")]
+        public string zip { get; set; }
+        [DisplayName("Country")]
+        public string country { get; set; }
+        [DisplayName("Joined")]
+        public string joined { get; set; }
+        [DisplayName("Graduated")]
+        public string graduated { get; set; }
+        [DisplayName("Company")]
+        public string company { get; set; }
+        [DisplayName("C-email")]
+        public string company_email { get; set; }
+        [DisplayName("C-Phone")]
+        public string company_phone { get; set; }
+        [DisplayName("Notes")]
+        public string notes { get; set; }
+
         
         [JsonProperty("members")]
         public List<ModelMembership> member;
