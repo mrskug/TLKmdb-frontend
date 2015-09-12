@@ -34,7 +34,7 @@ namespace TLKmdb_frontend
                 consoleBox.AppendText(user + "\n" + pass + "\n" + baseURL + "\n" + "\n");
 
                 Database TLK = new Database(baseURL, user, pass, "TLK");
-                TLK.populateDB();
+                consoleBox.AppendText(TLK.populateDB());
 
                 dataGridView.DataSource = TLK.persons;
 
