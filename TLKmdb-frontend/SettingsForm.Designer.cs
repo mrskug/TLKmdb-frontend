@@ -31,6 +31,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.settingsCloseButton = new System.Windows.Forms.Button();
             this.serverTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.passTextBox = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.settingsCloseButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -81,13 +81,23 @@
             this.tabPage1.Text = "Login";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // settingsCloseButton
+            // 
+            this.settingsCloseButton.Location = new System.Drawing.Point(19, 118);
+            this.settingsCloseButton.Name = "settingsCloseButton";
+            this.settingsCloseButton.Size = new System.Drawing.Size(75, 23);
+            this.settingsCloseButton.TabIndex = 6;
+            this.settingsCloseButton.Text = "Close";
+            this.settingsCloseButton.UseVisualStyleBackColor = true;
+            this.settingsCloseButton.Click += new System.EventHandler(this.settingsCloseButton_Click);
+            // 
             // serverTextBox
             // 
             this.serverTextBox.Location = new System.Drawing.Point(58, 74);
             this.serverTextBox.Name = "serverTextBox";
             this.serverTextBox.Size = new System.Drawing.Size(100, 20);
             this.serverTextBox.TabIndex = 5;
-            this.serverTextBox.Text = "127.0.0.1:8000";
+            this.serverTextBox.Text = "member.tlk.fi";
             // 
             // label3
             // 
@@ -104,7 +114,7 @@
             this.passTextBox.Name = "passTextBox";
             this.passTextBox.Size = new System.Drawing.Size(100, 20);
             this.passTextBox.TabIndex = 3;
-            this.passTextBox.Text = "password";
+            this.passTextBox.Text = "tlk123";
             this.passTextBox.UseSystemPasswordChar = true;
             // 
             // loginTextBox
@@ -113,7 +123,7 @@
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(100, 20);
             this.loginTextBox.TabIndex = 2;
-            this.loginTextBox.Text = "username";
+            this.loginTextBox.Text = "tlk";
             // 
             // label2
             // 
@@ -142,16 +152,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "nothing yet";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // settingsCloseButton
-            // 
-            this.settingsCloseButton.Location = new System.Drawing.Point(19, 118);
-            this.settingsCloseButton.Name = "settingsCloseButton";
-            this.settingsCloseButton.Size = new System.Drawing.Size(75, 23);
-            this.settingsCloseButton.TabIndex = 6;
-            this.settingsCloseButton.Text = "Close";
-            this.settingsCloseButton.UseVisualStyleBackColor = true;
-            this.settingsCloseButton.Click += new System.EventHandler(this.settingsCloseButton_Click);
             // 
             // SettingsForm
             // 

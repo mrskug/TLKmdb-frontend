@@ -8,6 +8,7 @@ namespace TLKmdb_frontend
 {
     class ModelMembership
     {
+        public string url;
         // modelname
         public string model;
         // pk (int)
@@ -22,6 +23,11 @@ namespace TLKmdb_frontend
         public int iType;
 
         public ModelMembership(){}
+
+        public ModelMembership(string url)
+        {
+            this.url = url;
+        }
 /**        public ModelMembership(int pk, int person, int year, int type)
         {
             this.pk = pk;

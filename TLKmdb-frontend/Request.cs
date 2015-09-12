@@ -78,7 +78,7 @@ namespace TLKmdb_frontend
             }
             else if (type == "PATCH")
             {
-                Console.WriteLine("DELETE Not implemented!");
+                Console.WriteLine("PATCH Not implemented!");
             }
             else
             {

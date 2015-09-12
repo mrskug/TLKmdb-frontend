@@ -74,5 +74,10 @@ namespace TLKmdb_frontend
         {
             //aboutWindow.show();
         }
+
+        private void debugGetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fetchDatabase();
+        }
     }
 }
