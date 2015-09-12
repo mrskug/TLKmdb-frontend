@@ -9,6 +9,8 @@ namespace TLKmdb_frontend
 {
     class Person
     {
+        [DisplayName("URL")]
+        public string url { get; set; }
         [DisplayName("ID")]
         public int pk {get;set;}
         [DisplayName("Firstname")]
@@ -48,23 +50,23 @@ namespace TLKmdb_frontend
 
         
         [JsonProperty("members")]
-        public List<ModelMembership> member;
+        public List<String> member;
         [JsonProperty("boards")]
-        public List<ModelMembership> board;
+        public List<String> board;
         [JsonProperty("officials")]
-        public List<ModelMembership> official;
+        public List<String> official;
         [JsonProperty("merits")]
-        public List<ModelMembership> merit;
+        public List<String> merit;
         [JsonProperty("committees")]
-        public List<ModelMembership> committee;
+        public List<String> committee;
 
         public Person()
         {
-            member = new List<ModelMembership>();
-            board = new List<ModelMembership>();
-            official = new List<ModelMembership>();
-            merit = new List<ModelMembership>();
-            committee = new List<ModelMembership>();
+            member = new List<String>();
+            board = new List<String>();
+            official = new List<String>();
+            merit = new List<String>();
+            committee = new List<String>();
         }
         public void printMembership(List<ModelMembership> list)
         {
