@@ -34,21 +34,29 @@ namespace TLKmdb_frontend
             
         }
 
-        public void populateDB()
+        public string populateDB()
         {
-            Console.WriteLine(baseURL + "/persons/?format=json" + " " + user + pass + "" + "GET");
-            Request responseJson = new Request(baseURL + "/persons", user, pass, "", "GET");
+            Console.WriteLine(baseURL + "/persons/" + " " + user + pass + "" + "GET");
+            Request responseJson = new Request(baseURL + "/persons/", user, pass, "", "GET");
 
-            JArray responseArray = JArray.Parse(responseJson.response);
-
-            List<JToken> tokens = responseArray.Children().ToList();
-
-            foreach (JToken token in tokens)
+            try
             {
-                string personJson = token.ToString();
-                Person person = JsonConvert.DeserializeObject<Person>(personJson);
-                persons.Add(person);
+                JArray responseArray = JArray.Parse(responseJson.response);
+                List<JToken> tokens = responseArray.Children().ToList();
+
+                foreach (JToken token in tokens)
+                {
+                    string personJson = token.ToString();
+                    Person person = JsonConvert.DeserializeObject<Person>(personJson);
+                    persons.Add(person);
+                }
             }
+            catch(Exception e) {
+                Console.WriteLine(e.Message);
+                return e.Message;
+            }
+            return "Success";
+            
         }
 
         public List<Person> DummyPopulateDB()
